@@ -45,6 +45,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Timer.cs" />
      <Compile Include="Assets\bolaaku.cs" />
      <Compile Include="Assets\kananMovement.cs" />
      <Compile Include="Assets\kiriMovement.cs" />
