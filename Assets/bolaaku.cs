@@ -5,10 +5,13 @@ using UnityEngine;
 public class bolaaku : MonoBehaviour
 {
     public int speed = 30;
+
+    public Rigidbody2D ball;
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(-1,-1) * speed;
+        ball.velocity = new Vector2(-1,-1) * speed;
+        // GetComponent<Rigidbody2D>().velocity = new Vector2(-1,-1) * speed;
     }
 
     // Update is called once per frame
