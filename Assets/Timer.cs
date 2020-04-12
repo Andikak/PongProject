@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public int counter = 30;
+    public int counter = 30; //variable counter
+    
     public Text timerText;
     // Start is called before the first frame update
     void Start()

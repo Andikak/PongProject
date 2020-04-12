@@ -6,6 +6,7 @@ public class bolaaku : MonoBehaviour
 {
     public int speed = 30;
     public Rigidbody2D ball;
+    public Animation anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +15,15 @@ public class bolaaku : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        // if(ball.velocity.x > 0){ //bola bergerak kekanan
+        //     ball.GetComponent<Transform>().localScale = new Vector3(1, 1, 1);
+        // }else{
+        //     ball.GetComponent<Transform>().localScale = new Vector3(-1, 1, 1);
+        // }
+
+        //masih error scale ny tidak bisa diatur 1,1,0
     }
 
     void OnCollisionEnter2D(Collision2D other) {
