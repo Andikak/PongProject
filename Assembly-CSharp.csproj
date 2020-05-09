@@ -46,6 +46,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\PlayScript.cs" />
+     <Compile Include="Assets\ScoringScript.cs" />
      <Compile Include="Assets\Timer.cs" />
      <Compile Include="Assets\bolaaku.cs" />
      <Compile Include="Assets\kananMovement.cs" />

@@ -7,6 +7,7 @@ public class bolaaku : MonoBehaviour
     public int speed = 30;
     public Rigidbody2D ball;
     public Animation anim;
+    public GameObject masterScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,9 @@ public class bolaaku : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) {
         if(other.collider.name=="Skanan" || other.collider.name=="Skiri"){
-           StartCoroutine(jeda());
+           masterScript.GetComponent<ScoringScript>().UpdateScoring(other.collider.name);
+            //menjeda bola setelah terkena tembok
+           StartCoroutine(jeda()); //untukpindahketengah
         }
     }
     IEnumerator jeda(){
