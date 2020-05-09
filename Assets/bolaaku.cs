@@ -8,6 +8,7 @@ public class bolaaku : MonoBehaviour
     public Rigidbody2D ball;
     public Animation anim;
     public GameObject masterScript;
+    public AudioSource hitEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +36,9 @@ public class bolaaku : MonoBehaviour
            masterScript.GetComponent<ScoringScript>().UpdateScoring(other.collider.name);
             //menjeda bola setelah terkena tembok
            StartCoroutine(jeda()); //untukpindahketengah
+        }
+        if(other.collider.tag=="Player"){ //menambahkan sound ketika bola terkena papan
+            hitEffect.Play();
         }
     }
     IEnumerator jeda(){
